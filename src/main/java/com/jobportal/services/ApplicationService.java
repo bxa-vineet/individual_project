@@ -183,7 +183,7 @@ public class ApplicationService {
 
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
 
-            File destination = new File(uploadDir + fileName);
+            File destination = new File(uploadDir , fileName);
 
             System.out.println("Saving file to: " + destination.getAbsolutePath());
 

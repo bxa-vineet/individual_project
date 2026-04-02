@@ -67,18 +67,14 @@ public class AuthService {
         user.setUsername(request.getUsername());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setEmail(request.getEmail());
-
-
         user.setRoles(roles);
-
         userRepository.save(user);
-
         return "User account created successfully";
     }
 
 
-    public LoginResponse login(LoginRequest request) {
 
+    public LoginResponse login(LoginRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.getUsername(),

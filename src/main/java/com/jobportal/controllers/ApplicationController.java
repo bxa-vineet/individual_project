@@ -21,11 +21,11 @@ public class ApplicationController {
 
 
     @PostMapping("/apply/{jobId}")
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     public ApplicationResponseDto applyJob(
             @PathVariable Long jobId,
             @RequestParam("file") MultipartFile file,
-            Authentication authentication
+          Authentication authentication
     ) throws IOException {
 
         String username = authentication.getName();

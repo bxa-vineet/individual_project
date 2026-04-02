@@ -101,7 +101,7 @@ public class AuthSecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/jobs/**").permitAll()
                         .requestMatchers("/uploads/**").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
                 )
                 .authenticationProvider(authProvider) // 🔥 important
                 .addFilterBefore(jwtAuthenticationFilter,

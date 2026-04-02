@@ -4,7 +4,6 @@ import com.jobportal.dto.JwtResponse;
 import com.jobportal.dto.LoginRequest;
 import com.jobportal.dto.LoginResponse;
 import com.jobportal.dto.SignUpRequest;
-import com.jobportal.entity.User;
 import com.jobportal.services.AuthService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
